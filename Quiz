@@ -1,0 +1,123 @@
+
+puts "QUIZ TIME"
+puts "Answer questions by typing A, B, OR C "
+puts   
+
+
+questions = [
+  {
+    question: "Whats the name of Sally's dog?",
+    answer: "B",
+    answer_choices: [
+      "A: noodle",
+      "B: snips",
+      "C: iron dog"
+          ]
+          },
+         {
+      question: "What best describes pluto?",
+      answer: "C",
+      answer_choices: [
+        "A: dwarf planet",
+        "B: a big asteroid",
+        "C: planet"
+      ]
+      },
+       {
+      question: "Which of the following is a prime number?",
+      answer: "C",
+      answer_choices: [
+        "A: 4",
+        "B: 10",
+        "C: 7"
+      ]
+    },
+       {
+      question: "Which of the following is not a fruit?",
+      answer: "C",
+      answer_choices: [
+        "A: Papaya",
+        "B: Tomato",
+        "C: Pop Tart"
+      ]
+    },
+       {
+      question: "Who shot the sheriff?",
+      answer: "A",
+      answer_choices: [
+        "A: Bob Marley",
+        "B: Jesus",
+        "C: Philip Glass"
+      ]
+    },
+       {
+      question: "What is the least common multiple of 9 and 5",
+      answer: "B",
+      answer_choices: [
+        "A: 40",
+        "B: 45",
+        "C: 55"
+      ]
+    },
+       {
+      question: "Dont be a ________",
+      answer: "A",
+      answer_choices: [
+        "A: Asshole",
+        "B: Basterd",
+        "C: Nice Guy"
+      ]
+    },
+       {
+      question: "Haters gonna ________",
+      answer: "C",
+      answer_choices: [
+        "A: Cause Problems",
+        "B: Start a hate group",
+        "C: Hate"
+      ]
+    },
+       {
+      question: "Players gonna ________",
+      answer: "A",
+      answer_choices: [
+        "A: Play",
+        "B: Hate",
+        "C: Game"
+      ]
+    },
+       {
+      question: "_______ it off",
+      answer: "B",
+      answer_choices: [
+        "A: Knock",
+        "B: Shake",
+        "C: Pop Tart"
+            ]
+          }
+]
+i = 0
+questions.each do |question|
+  loop do
+    puts question[:question]
+    puts question[:answer_choices]
+    answer = gets.chomp.capitalize
+    if answer == question[:answer]
+      puts "correct!"
+      i += 1
+      break
+    else
+      puts "Wrong!"
+      break
+    end
+  end
+end
+
+
+
+puts i
+if i >= 7
+  puts "great job!"
+else
+  puts "you did your best :( "
+end
